@@ -35,8 +35,14 @@ html_content = """
         <div class="nav-section">🌍 1. Global Overviews</div>
         <a class="nav-item active" onclick="loadPlot('Dashboards_01_Global/01_Dataset.html', this)">Dataset Breakdown (WT vs Enr)</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/02_CellTypes.html', this)">Global Cell Types</a>
-        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03a_Global_Composition_Bar_Abs.html', this)">Global Composition Bar (Absolute)</a>
-        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03b_Global_Composition_Bar_Pct.html', this)">Global Composition Bar (Percentage)</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03a_Global_Composition_Bar_Abs.html', this)">Composition Bar (Abs) Standard</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03b_Global_Composition_Bar_Pct.html', this)">Composition Bar (%) Standard</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03c_Global_Composition_Bar_Abs_Conf_07.html', this)">Composition Bar (Abs) Conf >= 0.7</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03d_Global_Composition_Bar_Pct_Conf_07.html', this)">Composition Bar (%) Conf >= 0.7</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03e_Global_Composition_Bar_Abs_Conf_05.html', this)">Composition Bar (Abs) Conf >= 0.5</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03f_Global_Composition_Bar_Pct_Conf_05.html', this)">Composition Bar (%) Conf >= 0.5</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03g_Global_Composition_Bar_Abs_Conf_02.html', this)">Composition Bar (Abs) Conf >= 0.2</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/03h_Global_Composition_Bar_Pct_Conf_02.html', this)">Composition Bar (%) Conf >= 0.2</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_01_Global/04_Global_ViralLoad_Log.html', this)">Global Viral Load (Log1p)</a>
         
         <div class="nav-section">🧫 2. Compartment Overviews</div>
@@ -47,6 +53,7 @@ html_content = """
         
         <a class="nav-item" onclick="loadPlot('Dashboards_02_Compartments/Tcell_00_Subtypes.html', this)">T-Cells: Subtypes Map</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_02_Compartments/Tcell_01_TargetScore.html', this)">T-Cells: Exhaustion Score</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_02_Compartments/Tcell_04_Targeted_Timecourse.html', this)">T-Cells: HC vs Active MS Timecourse</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_02_Compartments/Tcell_02_IFN_Score.html', this)">T-Cells: IFN Response Score</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_02_Compartments/Tcell_03_Timecourse_Score.html', this)">T-Cells: Timecourse Dynamics</a>
         
@@ -63,13 +70,25 @@ html_content = """
         <a class="nav-item" onclick="loadPlot('Dashboards_06_CD16pos_NK_Focus/02_CD16pos_NK_EBV_Gene_Expression.html', this)">CD16+ NK: Enriched EBV Profile</a>
         
         <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/01_ABC_Population_Dynamics.html', this)">ABC: WT Population Dynamics</a>
-        <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/02_ABC_EBV_Gene_Expression.html', this)">ABC: Enriched EBV Profile</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/04_ABC_Viral_Load_Jitter.html', this)">ABC: Viral Load Distribution</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/02_ABC_EBV_Gene_Expression.html', this)">ABC: Enriched EBV Profile (Major)</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/05_ABC_Full_EBV_Dotplot.html', this)">ABC: Enriched EBV Profile (Full)</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_ABC_Focus/06_ABC_Raw_EBV_Read_Counts.html', this)">ABC: Raw EBV Read Counts</a>
         
         <a class="nav-item" onclick="loadPlot('Dashboards_06_NonClassicalMono_Focus/01_NonClassicalMono_Population_Dynamics.html', this)">Non-Class Mono: WT Population Dynamics</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_06_NonClassicalMono_Focus/02_NonClassicalMono_EBV_Gene_Expression.html', this)">Non-Class Mono: Enriched EBV Profile</a>
 
         <a class="nav-item" onclick="loadPlot('Dashboards_06_Naive_Helper_T_Focus/01_Naive_Helper_T_Population_Dynamics.html', this)">Naive Helper T: WT Population Dynamics</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_Naive_Helper_T_Focus/04_Naive_Helper_T_Viral_Load_Jitter.html', this)">Naive Helper T: Viral Load Distribution</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_06_Naive_Helper_T_Focus/02_Naive_Helper_T_EBV_Gene_Expression.html', this)">Naive Helper T: Enriched EBV Profile</a>
+
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_Reg_T_Focus/01_Reg_T_Population_Dynamics.html', this)">Regulatory T: WT Population Dynamics</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_Reg_T_Focus/04_Reg_T_Viral_Load_Jitter.html', this)">Regulatory T: Viral Load Distribution</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_Reg_T_Focus/02_Reg_T_EBV_Gene_Expression.html', this)">Regulatory T: Enriched EBV Profile</a>
+
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_CD8_T_Focus/01_CD8_T_Population_Dynamics.html', this)">CD8+ T: WT Population Dynamics</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_CD8_T_Focus/04_CD8_T_Viral_Load_Jitter.html', this)">CD8+ T: Viral Load Distribution</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_06_CD8_T_Focus/02_CD8_T_EBV_Gene_Expression.html', this)">CD8+ T: Enriched EBV Profile</a>
 
         <div class="nav-section">📊 5. Differential Expression (WT)</div>
         <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/01_CD16pos_NK_MS_vs_HC_Mock_D1_Volcano.html', this)">CD16+ NK: Active MS vs HC (D1 Mock)</a>
@@ -84,14 +103,23 @@ html_content = """
         <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/01_Naive_Helper_T_MS_vs_HC_Mock_D1_Volcano.html', this)">Naive Helper T: Active MS vs HC (D1)</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/02_Naive_Helper_T_ActiveMS_EBV_D7_vs_D1_Volcano.html', this)">Naive Helper T: Active MS EBV (D7 vs D1)</a>
 
+        <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/01_Reg_T_MS_vs_HC_Mock_D1_Volcano.html', this)">Regulatory T: Active MS vs HC (D1)</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/02_Reg_T_ActiveMS_EBV_D7_vs_D1_Volcano.html', this)">Regulatory T: Active MS EBV (D7 vs D1)</a>
+
+        <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/01_CD8_T_MS_vs_HC_Mock_D1_Volcano.html', this)">CD8+ T: Active MS vs HC (D1)</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_07_Differential_Expression/02_CD8_T_ActiveMS_EBV_D7_vs_D1_Volcano.html', this)">CD8+ T: Active MS EBV (D7 vs D1)</a>
+
         <div class="nav-section">🔍 6. EBV Transcript Deep Dive</div>
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Bcell_01_Top5_Genes_by_Disease.html', this)">B-Cells: Top 5 EBV Genes</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Bcell_03_Viral_Load_Distribution.html', this)">B-Cells: Viral Load (Log1p)</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Bcell_02_Correlations_by_Disease.html', this)">B-Cells: EBV Drivers of ABC Score</a>
         
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Tcell_01_Top5_Genes_by_Disease.html', this)">T-Cells: Top 5 EBV Genes</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Tcell_03_Viral_Load_Distribution.html', this)">T-Cells: Viral Load (Log1p)</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Tcell_02_Correlations_by_Disease.html', this)">T-Cells: EBV Drivers of Exhaustion</a>
         
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Myeloid_01_Top5_Genes_by_Disease.html', this)">Myeloid: Top 5 EBV Genes</a>
+        <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Myeloid_03_Viral_Load_Distribution.html', this)">Myeloid: Viral Load (Log1p)</a>
         <a class="nav-item" onclick="loadPlot('Dashboards_03_EBV_DeepDive/Myeloid_02_Correlations_by_Disease.html', this)">Myeloid: EBV Drivers of Inflammation</a>
 
         <div class="nav-section">📅 7. Day 1 Contrasts</div>
